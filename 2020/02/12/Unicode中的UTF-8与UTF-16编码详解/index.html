@@ -16,7 +16,7 @@
   <meta name="description" content="go for it! just do it!">
   <meta name="author" content="HandsomeBoy">
   <meta name="keywords" content="Hello World">
-  <title>分类 ~ 计帅哥一枚</title>
+  <title>Unicode中的UTF-8与UTF-16编码详解 ~ 计帅哥一枚</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -39,7 +39,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -107,7 +107,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('/img/default.png')no-repeat center center;
+         style="background: url('/img/001_post_banner.jpg')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -117,6 +117,41 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期三, 二月 12日 2020, 8:22 晚上
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    343 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      1 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
             
           </div>
 
@@ -128,22 +163,76 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本文通过介绍Unicode编码以及对应的两种编码方式UTF-8和UTF-16，让读者能够了解关于字符串编码的相关知识，同时能够弄清楚Unicode和UTF-8和UTF-16之间的关系。</p>
+<ul>
+<li>Unicode编码，包含Unicode编码基础知识以及与UTF-8和UTF-16这两种编码方式的关系</li>
+<li>UTF-8编码，包含基础概念和Unicode编码转换到UTF-8编码方式</li>
+<li>UTF-16编码，包含基础概念和Unicode编码转换到UTF-16编码方式</li>
+</ul>
+<h3 id="Unicode编码"><a href="#Unicode编码" class="headerlink" title="Unicode编码"></a>Unicode编码</h3><p>Unicode（<a href="https://baike.baidu.com/item/统一码" target="_blank" rel="noopener">统一码</a>、万国码、单一码）是计算机科学领域里的一项业界标准,包括字符集、编码方案等。Unicode 是为了解决传统的字符编码方案的局限而产生的，它为每种语言中的每个字符设定了统一并且唯一的<a href="https://baike.baidu.com/item/二进制" target="_blank" rel="noopener">二进制</a>编码，以满足跨语言、跨平台进行文本转换、处理的要求。1990年开始研发，1994年正式公布。</p>
+<p>通常Unicode编码是通过2 Byte来表示一个字符的，如U+A12B，2 Byte的二进制表示方法结果就是1010(A)0001(1) 0010(2)1011(B)。简单介绍完了Unicode，我们来看下UTF-8和UTF-16。</p>
+<p>需要注意的是：<strong>UTF是Unicode TransferFormat的缩写，UTF-8和UTF-16都是把Unicode码转换成程序数据的一种编码方式。</strong></p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
                 
-
-<ul class="category-tree-list"><li class="category-tree-list-item"><a class="category-tree-list-link" href="/categories/Java/">Java</a><span class="category-tree-list-count">1</span></li></ul>
-
-
-              </div>
-            </div>
+                  <a class="hover-with-bg" href="/categories/Java">Java</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Encoding">Encoding</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -222,6 +311,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
@@ -262,7 +356,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "分类&nbsp;",
+        "Unicode中的UTF-8与UTF-16编码详解&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
